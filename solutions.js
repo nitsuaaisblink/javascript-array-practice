@@ -1,29 +1,29 @@
 const characters = [
 	{
 		name: 'Luke Skywalker',
-		height: '172',
-		mass: '77',
+		height: 172,
+		mass: 77,
 		eye_color: 'blue',
 		gender: 'male',
 	},
 	{
 		name: 'Darth Vader',
-		height: '202',
-		mass: '136',
+		height: 202,
+		mass: 136,
 		eye_color: 'yellow',
 		gender: 'male',
 	},
 	{
 		name: 'Leia Organa',
-		height: '150',
-		mass: '49',
+		height: 150,
+		mass: 49,
 		eye_color: 'brown',
 		gender: 'female',
 	},
 	{
 		name: 'Anakin Skywalker',
-		height: '188',
-		mass: '84',
+		height: 188,
+		mass: 84,
 		eye_color: 'blue',
 		gender: 'male',
 	},
@@ -107,3 +107,37 @@ const sortByGender = characters.sort((a, b) => {
 	return 1;
 });
 console.table(sortByGender);
+
+//** Reduce */
+// Get the total mass of all characters
+const totalMassOfAllCharacters = characters.reduce(
+	(total, character) => total + character.mass,
+	0
+);
+console.table(totalMassOfAllCharacters);
+
+// Get the total height of all characters
+const totalHeightOfAllCharacters = characters.reduce(
+	(total, character) => total + character.height,
+	0
+);
+console.table(totalHeightOfAllCharacters);
+
+// Get the total number of characters in all the character names
+const totalLettersInNames = characters.reduce(
+	(total, character) => total + character.name.length,
+	0
+);
+console.table(totalLettersInNames);
+
+// Get the total number of characters by eye color (hint. a map of eye color to count)
+const totalCharactersByEyeColor = characters.reduce((total, character) => {
+	if (total[character.eye_color]) {
+		total[character.eye_color]++;
+	} else {
+		total[character.eye_color] = 1;
+	}
+
+	return total;
+}, {});
+console.table(totalCharactersByEyeColor);
