@@ -141,3 +141,20 @@ const totalCharactersByEyeColor = characters.reduce((total, character) => {
 	return total;
 }, {});
 console.table(totalCharactersByEyeColor);
+
+//** Every */
+// Does every character have blue eyes?
+const allBlueEyes = characters.every((character) => character.eye_color === 'blue');
+console.table(allBlueEyes);
+
+// Does every character have mass more than 40?
+const allHaveMassGreaterThan40 = characters.every((character) => character.mass > 40);
+console.table(allHaveMassGreaterThan40);
+
+// Is every character shorter than 200?
+const allShorterThan200 = characters.every((character) => character.height < 200);
+console.table(allShorterThan200);
+
+// Is every character male?
+const allCharctersMale = characters.every((character) => character.gender === 'male');
+console.table(allCharctersMale);
