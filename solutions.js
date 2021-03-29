@@ -29,8 +29,21 @@ const characters = [
 	},
 ];
 
-//* Fileter */
+//* Filter */
 // Get characters with mass greater than 100
+const characterMassGreaterThan100 = characters.filter(
+	(character) => character.mass > 100
+);
+console.table(characterMassGreaterThan100);
+
 // Get characters with height less than 200
+const charterHeightLessThan200 = characters.filter((character) => character.height < 200);
+console.table(charterHeightLessThan200);
+
 // Get all male characters
+const maleCharacter = characters.filter((character) => character.gender === 'male');
+console.table(maleCharacter);
+
 // Get all female characters
+const femaleCharacter = characters.filter((character) => character.gender === 'female');
+console.table(femaleCharacter);
