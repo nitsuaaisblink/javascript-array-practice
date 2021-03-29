@@ -1,0 +1,13 @@
+{
+	"name": "javascript-array-practice",
+	"version": "1.0.0",
+	"description": "I wanted to learn how to use JavaScript array functions like map, reduce, filter, etc.? I used this worksheet to figure out how!",
+	"main": "index.html",
+	"scripts": {
+		"dev": "parcel index.html",
+		"build": "parcel build index.html"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
