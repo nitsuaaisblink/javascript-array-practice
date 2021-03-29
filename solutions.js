@@ -84,3 +84,26 @@ console.table(oneTallerThan200);
 // Is there at least one character that has mass less than 50?
 const oneMassLessThan40 = characters.some((character) => character.mass < 40);
 console.table(oneMassLessThan40);
+
+//* Sort */
+// Sort by mass
+const sortByMass = characters.sort((a, b) => a.mass - b.mass);
+console.table(sortByMass);
+
+// Sort by name
+const sortByName = characters.sort((a, b) => {
+	if (a.name < b.name) return -1;
+	return 1;
+});
+console.table(sortByName);
+
+// Sort by height
+const sortByHeight = characters.sort((a, b) => b.height - a.height);
+console.table(sortByHeight);
+
+// Sort by gender
+const sortByGender = characters.sort((a, b) => {
+	if (a.gender === 'female') return -1;
+	return 1;
+});
+console.table(sortByGender);
