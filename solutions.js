@@ -47,3 +47,23 @@ console.table(maleCharacter);
 // Get all female characters
 const femaleCharacter = characters.filter((character) => character.gender === 'female');
 console.table(femaleCharacter);
+
+//* Map */
+// Get an array of all names
+const allNames = characters.map((character) => character.name);
+console.table(allNames);
+
+// Get an array of all heights
+const allHeights = characters.map((character) => character.height);
+console.table(allHeights);
+
+// Get an array of objects with just name and height properties
+const allNamesAndHeight = characters.map((character) => ({
+	name: character.name,
+	height: character.height,
+}));
+console.table(allNamesAndHeight);
+
+// Get an array of all first names
+const firstNames = characters.map((character) => character.name.split(' ')[0]);
+console.table(firstNames);
