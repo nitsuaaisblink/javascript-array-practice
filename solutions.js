@@ -67,3 +67,20 @@ console.table(allNamesAndHeight);
 // Get an array of all first names
 const firstNames = characters.map((character) => character.name.split(' ')[0]);
 console.table(firstNames);
+
+//* Some */
+// Is there at least one male character?
+const oneMaleCharacter = characters.some((character) => character.gender === 'male');
+console.table(oneMaleCharacter);
+
+// Is there at least one character with blue eyes?
+const oneWithBlueEyes = characters.some((character) => character.eye_color === 'blue');
+console.table(oneWithBlueEyes);
+
+// Is there at least one character taller than 200?
+const oneTallerThan200 = characters.some((character) => character.height > 200);
+console.table(oneTallerThan200);
+
+// Is there at least one character that has mass less than 50?
+const oneMassLessThan40 = characters.some((character) => character.mass < 40);
+console.table(oneMassLessThan40);
